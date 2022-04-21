@@ -19,16 +19,6 @@ args['port']
 // Define a const `HTTP_PORT` using the argument from the command line.
 const HTTP_PORT = args.port || process.env.PORT || 3000
 
-// Start an app server
-const server = app.listen(HTTP_PORT, () => {
-    console.log('App listening on port %PORT%'.replace('%PORT%',HTTP_PORT))
-});
-
-// Default response for any other request
-app.use(function(req, res){
-    res.status(404).send('404 NOT FOUND')
-});
-
 
 /* COIN FUNCTIONS */
 // Coin flip
@@ -116,4 +106,16 @@ app.get('/app/flip/call/heads', (req, res) => {
 app.get('/app/flip/call/tails', (req, res) => {
 	const flip = flipACoin('tails');
     res.status(200).json({ 'call' : flip.call, 'flip': flip.flip, 'result': flip.result});
+});
+
+
+/* SERVER */
+// Start an app server
+const server = app.listen(HTTP_PORT, () => {
+    console.log('App listening on port %PORT%'.replace('%PORT%',HTTP_PORT))
+});
+
+// Default response for any other request
+app.use(function(req, res){
+    res.status(404).send('404 NOT FOUND')
 });
