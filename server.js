@@ -95,10 +95,7 @@ app.get('/app/', (req, res) => {
 
 // Define flip endpoint
 app.get('/app/flip/', (req, res) => {
-	//Some
-	//expressions
-	//go
-	//here
+	res.status(200).json({'flip': coinFlip()});
 });
 
 // Define number endpoint
