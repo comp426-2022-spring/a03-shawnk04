@@ -101,3 +101,11 @@ app.get('/app/flip/', (req, res) => {
 	//here
 });
 
+// Define number endpoint
+app.get('/app/flips/:number', (req, res) => {
+	//Some
+	//expressions
+	//go
+	//here
+});
+
