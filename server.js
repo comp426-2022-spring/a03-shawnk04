@@ -103,10 +103,8 @@ app.get('/app/flip/', (req, res) => {
 
 // Define number endpoint
 app.get('/app/flips/:number', (req, res) => {
-	//Some
-	//expressions
-	//go
-	//here
+    const flips = coinFlips(req.params.number);
+	res.status(200).json( {'raw' : flips, 'summary' : countFlips(flips)});
 });
 
 // Define heads endpoint
