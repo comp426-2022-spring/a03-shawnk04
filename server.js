@@ -29,6 +29,7 @@ app.use(function(req, res){
     res.status(404).send('404 NOT FOUND')
 });
 
+
 /* COIN FUNCTIONS */
 // Coin flip
 function coinFlip() {
@@ -81,6 +82,7 @@ function flipACoin(call) {
   };
   return result;
 }
+
 
 /* ENDPOINTS */
 // Define check endpoint
