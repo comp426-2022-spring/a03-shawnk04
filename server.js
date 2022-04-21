@@ -38,3 +38,13 @@ app.get('/app/', (req, res) => {
         res.end(res.statusCode+ ' ' +res.statusMessage)
 });
 
+/* COIN FUNCTIONS */
+// Coin flips
+function coinFlips(flips) {
+    let results = [];
+    for (let i = 0; i < flips; i++) {
+      results.push(coinFlip());
+    }
+    return results;
+}
+
