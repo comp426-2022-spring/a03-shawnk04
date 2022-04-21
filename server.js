@@ -48,3 +48,30 @@ function coinFlips(flips) {
     return results;
 }
 
+// Count flips
+function countFlips(array) {
+    const result = {
+      tails: 0,
+      heads: 0
+    };
+    if (array.length == 1) {
+      if (array[0] ==  "heads") {
+         return { heads: 1 };
+      }
+      else {
+        return { tails: 1 };
+      }
+    }
+    else {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] ==  "heads") {
+          result.heads++;
+        }
+        else {
+          result.tails++;
+        }
+      }
+    }
+    return result;
+}
+
