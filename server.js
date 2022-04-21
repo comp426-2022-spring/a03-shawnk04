@@ -1,3 +1,4 @@
+/* SETTING UP */
 // Require http module
 const http = require('http')
 
@@ -26,16 +27,6 @@ const server = app.listen(HTTP_PORT, () => {
 // Default response for any other request
 app.use(function(req, res){
     res.status(404).send('404 NOT FOUND')
-});
-
-// Define check endpoint
-app.get('/app/', (req, res) => {
-    // Respond with status 200
-        res.statusCode = 200;
-    // Respond with status message "OK"
-        res.statusMessage = 'OK';
-        res.writeHead( res.statusCode, { 'Content-Type' : 'text/plain' });
-        res.end(res.statusCode+ ' ' +res.statusMessage)
 });
 
 /* COIN FUNCTIONS */
@@ -90,4 +81,15 @@ function flipACoin(call) {
   };
   return result;
 }
+
+/* ENDPOINTS */
+// Define check endpoint
+app.get('/app/', (req, res) => {
+    // Respond with status 200
+        res.statusCode = 200;
+    // Respond with status message "OK"
+        res.statusMessage = 'OK';
+        res.writeHead( res.statusCode, { 'Content-Type' : 'text/plain' });
+        res.end(res.statusCode+ ' ' +res.statusMessage)
+});
 
