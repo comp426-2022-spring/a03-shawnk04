@@ -17,5 +17,9 @@ args['port']
 
 // Define a const `port` using the argument from the command line. 
 // Make this const default to port 3000 if there is no argument given for `--port`.
-const port = args.port || process.env.PORT || 3000
+const HTTP_PORT = args.port || process.env.PORT || 3000
 
+// Start an app server
+const server = app.listen(HTTP_PORT, () => {
+    console.log('App listening on port %PORT%'.replace('%PORT%',HTTP_PORT))
+});
