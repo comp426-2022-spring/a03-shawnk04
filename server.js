@@ -117,3 +117,10 @@ app.get('/app/flip/call/heads', (req, res) => {
 	//here
 });
 
+// Define tails endpoint
+app.get('/app/flip/call/tails', (req, res) => {
+	//Some
+	//expressions
+	//go
+	//here
+});
