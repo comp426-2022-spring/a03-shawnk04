@@ -29,6 +29,7 @@ app.use(function(req, res){
     res.status(404).send('404 NOT FOUND')
 });
 
+// Define check endpoint
 app.get('/app/', (req, res) => {
     // Respond with status 200
         res.statusCode = 200;
