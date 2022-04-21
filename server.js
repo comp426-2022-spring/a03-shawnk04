@@ -15,8 +15,8 @@ const app = express();
 // Define allowed argument name 'port'.
 args['port'];
 
-// Define a const `HTTP_PORT` using the argument from the command line.
-const HTTP_PORT = args.port || process.env.PORT || 3000;
+// Define a const `port` using the argument from the command line.
+const port = args.port || process.env.PORT || 3000;
 
 
 /* 
@@ -116,8 +116,8 @@ app.get('/app/flip/call/tails', (req, res) => {
     SERVER 
 */
 // Start an app server
-const server = app.listen(HTTP_PORT, () => {
-    console.log('App listening on port %PORT%'.replace('%PORT%',HTTP_PORT))
+app.listen(port, () => {
+    console.log('App listening on port %PORT%'.replace('%PORT%', port))
 });
 
 // Default response for any other request
