@@ -75,3 +75,14 @@ function countFlips(array) {
     return result;
 }
 
+// Flip a coin
+function flipACoin(call) {
+  let flip = coinFlip();
+  const result = {
+    call: call,
+    flip: flip,
+    result: ((flip == call) ? "win" : "lose")
+  };
+  return result;
+}
+
