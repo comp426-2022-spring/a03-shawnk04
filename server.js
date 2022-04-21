@@ -1,4 +1,6 @@
-/* SETTING UP */
+/* 
+    SETTING UP 
+*/
 // Require http module
 const http = require('http')
 
@@ -20,7 +22,9 @@ args['port']
 const HTTP_PORT = args.port || process.env.PORT || 3000
 
 
-/* COIN FUNCTIONS */
+/* 
+    COIN FUNCTIONS 
+*/
 // Coin flip
 function coinFlip() {
     return (Math.floor(Math.random() * 2) == 0) ? "heads" : "tails";
@@ -74,7 +78,9 @@ function flipACoin(call) {
 }
 
 
-/* ENDPOINTS */
+/* 
+    ENDPOINTS 
+*/
 // Define check endpoint
 app.get('/app/', (req, res) => {
     // Respond with status 200
@@ -109,7 +115,9 @@ app.get('/app/flip/call/tails', (req, res) => {
 });
 
 
-/* SERVER */
+/* 
+    SERVER 
+*/
 // Start an app server
 const server = app.listen(HTTP_PORT, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%',HTTP_PORT))
