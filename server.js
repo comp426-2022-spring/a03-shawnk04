@@ -106,10 +106,8 @@ app.get('/app/flips/:number', (req, res) => {
 
 // Define heads endpoint
 app.get('/app/flip/call/heads', (req, res) => {
-	//Some
-	//expressions
-	//go
-	//here
+	const flip = flipACoin('heads');
+    res.status(200).json({ 'call' : flip.call, 'flip': flip.flip, 'result': flip.result});
 });
 
 // Define tails endpoint
