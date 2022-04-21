@@ -109,3 +109,11 @@ app.get('/app/flips/:number', (req, res) => {
 	//here
 });
 
+// Define heads endpoint
+app.get('/app/flip/call/heads', (req, res) => {
+	//Some
+	//expressions
+	//go
+	//here
+});
+
