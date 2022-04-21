@@ -93,3 +93,11 @@ app.get('/app/', (req, res) => {
         res.end(res.statusCode+ ' ' +res.statusMessage)
 });
 
+// Define flip endpoint
+app.get('/app/flip/', (req, res) => {
+	//Some
+	//expressions
+	//go
+	//here
+});
+
